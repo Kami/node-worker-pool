@@ -1,9 +1,9 @@
 // the actual web worker
 
-var worker = require("worker").worker;
- 
+var worker = require('../lib/worker').worker;
+
 worker.onmessage = function (msg) {
   worker.postMessage({
-    hello: "mother"
+    hello: 'mother'
   });
 };
