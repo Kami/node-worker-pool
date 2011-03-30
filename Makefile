@@ -4,4 +4,9 @@ test:
 test-pool:
 	@find test/test-worker-pool*.js | xargs -n 1 -t expresso
 
-.PHONY: test test-pool
+test-all:
+	make test
+	sleep 1
+	make test-pool
+
+.PHONY: test test-pool test-all
