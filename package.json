@@ -15,16 +15,16 @@
   },
   "directories": {
     "lib": "./lib",
-    "example": "./example",
+    "example": "./example"
   },
   "scripts": {
     "test": "make test-all"
   },
   "devEependencies": {
-    "expresso": ">= 0.3.18",
+    "expresso": ">= 0.3.18"
   },
   "engines": {
     "node": ">= 0.2.0"
   },
-  "main": "./index",
+  "main": "./index"
 }
