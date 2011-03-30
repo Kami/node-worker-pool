@@ -1,38 +1,12 @@
-# node-worker - 0.0.1
+Node Worker Pool
+================
 
-node-worker is an implementation of the WebWorker API for node.js.
-http://www.whatwg.org/specs/web-workers/current-work/
+An implementation of the web worker API with a worker pool support.
 
-## Example
+Based on the [node-worker](https://github.com/cramforce/node-worker) library by
+Malte Ubl.
 
-    var Worker = require("../lib/worker").Worker;
+Examples
+========
 
-    var worker = new Worker("worker.js");
-
-    worker.postMessage({
-      hello: "world"
-    });
-
-    worker.onmessage = function (msg) {
-      sys.puts(msg.hello);
-    };
-
-    worker.addListener("message", function (msg) {
-      sys.puts(msg.hello);
-      worker.terminate();
-    });
-
-## Example Worker File
-
-    var worker = require("worker").worker;
-
-    worker.onmessage = function (msg) {
-      worker.postMessage({
-        hello: "mother"
-      });
-    };
-
-  
-
-
-
+For examples, please see `test` directory.
