@@ -1,4 +1,4 @@
-var sys = require('sys');
+var util = require('util');
 
 var Worker = require('../lib/worker').Worker;
 
@@ -9,10 +9,10 @@ worker.postMessage({
 });
 
 worker.onmessage = function (msg) {
-  sys.puts(msg.hello);
+  util.puts(msg.hello);
 };
 
 worker.addListener('message', function (msg) {
-  sys.puts(msg.hello);
+  util.puts(msg.hello);
   worker.terminate();
 });

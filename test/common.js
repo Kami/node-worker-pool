@@ -7,16 +7,16 @@ exports.libDir = path.join(exports.testDir, "../../lib");
 require.paths.unshift(exports.libDir);
  
 var assert = require('assert');
-var sys = require("sys");
+var util = require('util');
 
 exports.path = path;
 
 var ok = assert.ok;
 assert.ok = function (bool, msg) {
   if(bool) {
-    sys.print("OK ")
+    util.print("OK ")
   } else {
-    sys.print("NOT OK ")
+    util.print("NOT OK ")
   }
-  sys.puts(msg);
+  util.puts(msg);
 }
