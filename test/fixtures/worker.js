@@ -6,7 +6,7 @@ exports.libDir = path.join(exports.testDir, "../../lib");
  
 require.paths.unshift(exports.libDir);
  
-var sys    = require("sys");
+var util = require('util');
 var worker = require("worker").worker;
  
 worker.onmessage = function (msg) {
