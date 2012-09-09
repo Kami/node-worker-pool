@@ -6,7 +6,7 @@ exports.libDir = path.join(exports.testDir, "../../lib");
  
 require.paths.unshift(exports.libDir);
 
-var port = parseInt(process.ARGV[2]);
+var port = parseInt(process.argv[2]);
 
 var sys    = require("sys");
 var worker = require("tcpworker").startWorker(port);
